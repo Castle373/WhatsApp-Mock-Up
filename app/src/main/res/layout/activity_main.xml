@@ -7,15 +7,32 @@
     tools:context=".MainActivity"
     android:background="@color/black">
 
-
     <LinearLayout
-        android:id="@+id/linearLayout"
+        android:id="@+id/topWhatsapp1"
         android:layout_width="match_parent"
-        android:layout_height="100dp"
+        android:layout_height="80dp"
         android:background="@color/greenwatsap"
         android:orientation="horizontal"
-        android:gravity="bottom">
+        tools:ignore="MissingConstraints">
+        <TextView
+            android:layout_width="150dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="20dp"
+            android:text="WhatsApp"
+            android:textColor="@color/white"
+            android:textSize="25dp">
+        </TextView>
 
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/topWhatsapp"
+        android:layout_width="match_parent"
+        android:layout_height="23dp"
+        android:background="@color/greenwatsap"
+        app:layout_constraintTop_toBottomOf="@+id/topWhatsapp1"
+        android:orientation="horizontal"
         >
 
         <TextView
@@ -47,45 +64,180 @@
     </LinearLayout>
 
     <LinearLayout
-        android:id="@+id/linearLayout2"
+        android:id="@+id/zoneLockChats"
         android:layout_width="match_parent"
         android:layout_height="60dp"
         android:background="@android:color/white"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout"
-        tools:layout_editor_absoluteX="16dp"
-        android:orientation="vertical"
+        app:layout_constraintTop_toBottomOf="@+id/topWhatsapp"
+        android:orientation="horizontal"
         >
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            >
+
+        </ImageView>
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Locked Chats"
+            android:textSize="17dp"
+            >
+        </TextView>
+    </LinearLayout>
+
+
+
+    <LinearLayout
+        android:id="@+id/zoneArchived"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@+id/zoneLockChats"
+        android:orientation="horizontal"
+        >
+        <ImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            >
+
+        </ImageView>
+        <TextView
+            android:layout_marginTop="20dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Archived"
+            android:textSize="17dp"
+            >
+        </TextView>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/zoneChat1"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@+id/zoneArchived"
+        android:orientation="horizontal"
+        >
+
+
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/cebolla1">
+
+        </ImageView>
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Diego Robles Rojas"
+            android:textSize="17dp"
+            >
+        </TextView>
 
     </LinearLayout>
 
     <LinearLayout
+        android:id="@+id/zoneChat2"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:background="@android:color/white"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout4"
-        tools:layout_editor_absoluteX="0dp"></LinearLayout>
+        app:layout_constraintTop_toBottomOf="@+id/zoneChat1"
 
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/borrego">
+
+        </ImageView>
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Ivan Bustillos Angulos"
+            android:textSize="17dp"
+            >
+        </TextView>
+    </LinearLayout>
     <LinearLayout
-        android:id="@+id/linearLayout3"
+        android:id="@+id/zoneChat3"
         android:layout_width="match_parent"
-        android:layout_height="60dp"
+        android:layout_height="80dp"
         android:background="@android:color/white"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout2"
-        tools:layout_editor_absoluteX="0dp"
-        android:orientation="vertical"
-        >
+        app:layout_constraintTop_toBottomOf="@+id/zoneChat2"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/cebolla2">
+
+        </ImageView>
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Libolein"
+            android:textSize="17dp"
+            >
+        </TextView>
 
     </LinearLayout>
     <LinearLayout
-        android:id="@+id/linearLayout4"
+        android:id="@+id/zoneChat4"
         android:layout_width="match_parent"
         android:layout_height="80dp"
         android:background="@android:color/white"
-        app:layout_constraintTop_toBottomOf="@+id/linearLayout3"
-        tools:layout_editor_absoluteX="0dp"
-        android:orientation="vertical"
-        >
+        app:layout_constraintTop_toBottomOf="@+id/zoneChat3"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/cebolla1">
 
+        </ImageView>
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Jesus Villanueva"
+            android:textSize="17dp"
+            >
+        </TextView>
+
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/zoneChat5"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@android:color/white"
+        app:layout_constraintTop_toBottomOf="@+id/zoneChat4"
+        android:orientation="horizontal">
+        <ImageView
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/perona">
+
+        </ImageView>
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="Carmen Hernandez"
+            android:textSize="17dp"
+            >
+        </TextView>
     </LinearLayout>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
