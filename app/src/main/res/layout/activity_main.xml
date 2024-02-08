@@ -24,8 +24,17 @@
             android:textSize="25dp">
         </TextView>
 
+        <ImageView
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:layout_marginLeft="190dp"
+            >
+
+        </ImageView>
+
 
     </LinearLayout>
+
     <LinearLayout
         android:id="@+id/topWhatsapp"
         android:layout_width="match_parent"
@@ -74,6 +83,7 @@
         <ImageView
             android:layout_width="60dp"
             android:layout_height="60dp"
+
             >
 
         </ImageView>
@@ -122,26 +132,24 @@
         android:background="@android:color/white"
         app:layout_constraintTop_toBottomOf="@+id/zoneArchived"
         android:orientation="horizontal"
-        >
+        android:padding="8dp">
 
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:layout_width="60dp"
+            android:layout_height="60dp"
+            android:src="@drawable/cebolla1"
+            android:layout_marginEnd="16dp" />
 
-        <ImageView
-            android:layout_width="80dp"
-            android:layout_height="80dp"
-            android:src="@drawable/cebolla1">
-
-        </ImageView>
         <TextView
-            android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp"
-            android:layout_width="match_parent"
-            android:layout_height="match_parent"
-            android:text="Diego Robles Rojas"
-            android:textSize="17dp"
-            >
-        </TextView>
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:text="Nombre del Contacto"
+            android:textSize="16sp"/>
 
     </LinearLayout>
+
 
     <LinearLayout
         android:id="@+id/zoneChat2"
@@ -151,19 +159,20 @@
         app:layout_constraintTop_toBottomOf="@+id/zoneChat1"
 
         android:orientation="horizontal">
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
             android:layout_width="80dp"
             android:layout_height="80dp"
+
             android:src="@drawable/borrego">
 
-        </ImageView>
+        </de.hdodenhof.circleimageview.CircleImageView>
         <TextView
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Ivan Bustillos Angulos"
-            android:textSize="17dp"
+            android:text="@string/ivan_bustillos_angulos"
+            android:textSize="17sp"
             >
         </TextView>
     </LinearLayout>
@@ -174,12 +183,15 @@
         android:background="@android:color/white"
         app:layout_constraintTop_toBottomOf="@+id/zoneChat2"
         android:orientation="horizontal">
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
             android:layout_width="80dp"
             android:layout_height="80dp"
+            android:background="@drawable/circle_shape"
+            android:scaleType="centerCrop"
+            android:layout_margin="2dp"
             android:src="@drawable/cebolla2">
 
-        </ImageView>
+        </de.hdodenhof.circleimageview.CircleImageView>
         <TextView
             android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
@@ -198,12 +210,12 @@
         android:background="@android:color/white"
         app:layout_constraintTop_toBottomOf="@+id/zoneChat3"
         android:orientation="horizontal">
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
             android:layout_width="80dp"
             android:layout_height="80dp"
             android:src="@drawable/cebolla1">
 
-        </ImageView>
+        </de.hdodenhof.circleimageview.CircleImageView>
         <TextView
             android:layout_marginTop="10dp"
             android:layout_marginLeft="10dp"
@@ -223,21 +235,40 @@
         android:background="@android:color/white"
         app:layout_constraintTop_toBottomOf="@+id/zoneChat4"
         android:orientation="horizontal">
-        <ImageView
+        <de.hdodenhof.circleimageview.CircleImageView
             android:layout_width="80dp"
             android:layout_height="80dp"
-            android:src="@drawable/perona">
+            android:src="@drawable/perona"
+            >
 
-        </ImageView>
+        </de.hdodenhof.circleimageview.CircleImageView
         <TextView
             android:layout_marginTop="10dp"
-            android:layout_marginLeft="10dp"
+            android:layout_marginStart="10dp"
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:text="Carmen Hernandez"
-            android:textSize="17dp"
+            android:text="@string/carmen_hernandez"
+            android:textSize="17sp"
             >
         </TextView>
     </LinearLayout>
+    <androidx.coordinatorlayout.widget.CoordinatorLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <!-- Contenedor principal de tu diseño -->
+
+        <!-- Agrega el FloatingActionButton -->
+        <com.google.android.material.floatingactionbutton.FloatingActionButton
+            android:id="@+id/nuevoMensaje"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|end"
+            android:layout_margin="16dp"
+            android:src="@drawable/ic_new_message"
+
+            app:layout_anchorGravity="bottom|end" />
+    </androidx.coordinatorlayout.widget.CoordinatorLayout>
+
 
 </androidx.constraintlayout.widget.ConstraintLayout>
